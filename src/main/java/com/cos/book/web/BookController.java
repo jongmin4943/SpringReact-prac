@@ -27,7 +27,7 @@ public class BookController {
 	}
 	
 	
-	@GetMapping("/")
+	@GetMapping("/book")
 	public ResponseEntity<?> findAll() {
 		return new ResponseEntity<>(bookService.getAll(),HttpStatus.OK);
 	}
