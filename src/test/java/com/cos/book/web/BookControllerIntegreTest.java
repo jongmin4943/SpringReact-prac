@@ -58,7 +58,8 @@ public class BookControllerIntegreTest {
 	
 	@BeforeEach
 	public void init() {
-		entityManager.createNativeQuery("ALTER TABLE book ALTER COLUMN ID RESTART WITH 1").executeUpdate();
+//		entityManager.createNativeQuery("ALTER TABLE book ALTER COLUMN ID RESTART WITH 1").executeUpdate();
+		entityManager.createNativeQuery("ALTER TABLE book AUTO_INCREMENT=1").executeUpdate();
 	}
 	
 	//BDDMockito 패턴
